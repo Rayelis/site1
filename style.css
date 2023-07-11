@@ -3,6 +3,7 @@
     --default_color: #2b2b2b;
     --active_dark_color: darkgrey;
     --background_color: white;
+    --darker_background_color: #eee;
     --font_size: clamp(1rem, 3svh, 2rem);
     --block_size: clamp(1rem, 3svh, 2rem);
     --font: Arial, sans-serif;
@@ -23,10 +24,6 @@ header{
 .header-top{
     background-color: var(--background_color);
     padding: var(--block_size);
-}
-
-.logo{
-    border-right-style: solid;
 }
 
 .contacts{
@@ -74,6 +71,7 @@ header{
 .content{
     display: flex;
     flex-direction: row;
+    background-color: var(--darker_background_color);
 }
 
 aside{
@@ -84,6 +82,7 @@ aside{
     padding: var(--block_size);
     padding-left: calc(var(--block_size) * 4);
     padding-right: calc(var(--block_size) * 4);
+    background-color: var(--background_color);
 }
 
 main{
@@ -93,4 +92,78 @@ main{
 .sub_category_image{
     width: calc(var(--block_size) * 20);
     height: calc(var(--block_size) * 10);;
+}
+
+.nav-passive{
+    background-color: var(--default_color);
+    color: white;
+    opacity: 0.7;
+}
+
+.nav-passive:hover{
+    opacity: 1;
+}
+
+.main-nav-button{
+    border: unset;
+    height: calc(var(--block_size) * 1.5);
+    width: calc(var(--block_size) * 5);
+    margin-right: var(--block_size);
+}
+
+.main-content{
+    background-color: var(--background_color);
+    margin-right: calc(var(--block_size) * 7);
+    padding: var(--block_size);
+}
+
+.black-screen{
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.feedback-form{
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    background-color: var(--background_color);
+    padding: var(--block_size);
+    width: calc(100% - var(--block_size) * 2);
+}
+
+.hidden {
+    display: none;
+}
+
+.close-button{
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    border: unset;
+    background-color: unset;
+    font-size: calc(var(--font_size) * 2);
+}
+
+.feedback-input{
+    display: flex;
+    flex-direction: row;
+    height: calc(var(--block_size) * 1.5);
+}
+
+.feedback-input > input{
+    height: auto;
+    border-radius: unset;
+    border-style: solid;
+    border-width: 1px;
+    font-size: calc(var(--font_size) * 0.7);
+    margin-right: calc(var(--block_size) * 0.7);
+}
+
+.feedback-input > input:focus, input:active, input:hover{
+    outline: none;
+    border-color: var(--active_color);
 }
