@@ -4,6 +4,8 @@
     --active_dark_color: darkgrey;
     --background_color: white;
     --darker_background_color: #eee;
+    --font-color: black;
+    --alt-font-color: white;
     --font_size: clamp(1rem, 3svh, 2rem);
     --block_size: clamp(1rem, 3svh, 2rem);
     --font: Arial, sans-serif;
@@ -35,11 +37,11 @@ header{
 .button{
     border: unset;
     background-color: var(--default_color);
-    color: white;
+    color: var(--alt-font-color);
 }
 
 .button:hover{
-    background-color: var(--active_dark_color);
+    background-color: var(--active_color);
 }
 
 .header-bottom{
@@ -47,7 +49,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--default_color);
-    color: white;
+    color: var(--alt-font-color);
 }
 
 .nav{
@@ -58,6 +60,25 @@ header{
 
 .nav:hover{
     background-color: var(--active_color);
+}
+
+.nav:hover .nav-dropdown{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: calc(var(--block_size) * 0.2);
+    column-gap: calc(var(--block_size));
+}
+
+.nav-dropdown{
+    display: none;
+    position: absolute;
+    top: calc(var(--block_size) * 6.45);
+    transform: translateX(calc(var(--block_size) * -1));
+    background-color: var(--default_color);
+    color: var(--alt-font-color);
+    padding: var(--block_size);
+    font-size: calc(var(--font_size) * 0.9);
 }
 
 .nav-active{
@@ -96,7 +117,7 @@ main{
 
 .nav-passive{
     background-color: var(--default_color);
-    color: white;
+    color: var(--alt-font-color);
     opacity: 0.7;
 }
 
