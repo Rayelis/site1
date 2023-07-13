@@ -61,3 +61,20 @@ function hide_feedback_form(){
 
 }
 
+
+let is_sidebar_shown = false
+function show_sidebar(){
+    
+    let sidebar = document.querySelector(".mobile-sidebar")
+
+    if(is_sidebar_shown){
+        sidebar.removeAttribute("style")
+        is_sidebar_shown = false
+        return
+    } 
+    
+    sidebar.style.transform = "translateX(0)"
+    is_sidebar_shown = true
+
+}
+
