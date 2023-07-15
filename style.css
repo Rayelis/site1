@@ -1,10 +1,9 @@
 :root{
-    --active_color: darkorange;
-    --default_color: #2b2b2b;
-    --active_dark_color: darkgrey;
-    --background_color: white;
-    --darker_background_color: #eee;
-    --font-color: black;
+    --active_color: #f37362;
+    --default_color: white;
+    --background-color: #eeeeee;
+    --darker_background_color: #ee4a36;
+    --font-color: #2b2b2b;
     --alt-font-color: white;
     --font_size: clamp(1rem, 3svh, 2rem);
     --block_size: clamp(1rem, 3svh, 2rem);
@@ -16,6 +15,7 @@ body{
     margin: 0;
     z-index: 0;
     font: var(--font_size) var(--font);
+    color: var(--font-color);
 }
 
 header{
@@ -35,9 +35,10 @@ header{
 }
 
 .button{
-    border: unset;
-    background-color: var(--default_color);
+    border-width: 0;
+    background-color: var(--darker_background_color);
     color: var(--alt-font-color);
+    border-radius: calc(var(--block_size) * 0.5);
 }
 
 .button:hover{
@@ -48,8 +49,9 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: var(--default_color);
-    color: var(--alt-font-color);
+    background-color: var(--background-color);
+    color: var(--font-color);
+    box-shadow: 0 0 5px 1px;
 }
 
 .nav{
@@ -60,29 +62,35 @@ header{
 
 .nav:hover{
     background-color: var(--active_color);
+    color: var(--alt-font-color);
 }
 
 .nav:hover .nav-dropdown{
+    top: calc(var(--block_size) * 6.45);
+    opacity: 1;
+    transform: translate(calc(var(--block_size) * -1), 0);
+}
+
+.nav-dropdown{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     row-gap: calc(var(--block_size) * 0.2);
     column-gap: calc(var(--block_size));
-}
-
-.nav-dropdown{
-    display: none;
     position: absolute;
-    top: calc(var(--block_size) * 6.45);
-    transform: translateX(calc(var(--block_size) * -1));
-    background-color: var(--default_color);
-    color: var(--alt-font-color);
+    top: -100%;
+    transform: translate(calc(var(--block_size) * -1), 5%);
+    background-color: var(--active_color);
+    color: var(font-color);
     padding: var(--block_size);
     font-size: calc(var(--font_size) * 0.9);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .nav-active{
-    background-color: var(--active_color);
+    background-color: var(--darker_background_color);
+    color: var(--default_color);
 }
 
 .mobile-show{
@@ -92,7 +100,7 @@ header{
 .content{
     display: flex;
     flex-direction: row;
-    background-color: var(--darker_background_color);
+    background-color: var(--background_color);
 }
 
 aside{
@@ -103,7 +111,7 @@ aside{
     padding: var(--block_size);
     padding-left: calc(var(--block_size) * 4);
     padding-right: calc(var(--block_size) * 4);
-    background-color: var(--background_color);
+    background-color: var(--background-color);
 }
 
 main{
@@ -116,13 +124,8 @@ main{
 }
 
 .nav-passive{
-    background-color: var(--default_color);
-    color: var(--alt-font-color);
-    opacity: 0.7;
-}
-
-.nav-passive:hover{
-    opacity: 1;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 .main-nav-button{
@@ -133,7 +136,7 @@ main{
 }
 
 .main-content{
-    background-color: var(--background_color);
+    background-color: var(--background-color);
     margin-right: calc(var(--block_size) * 7);
     padding: var(--block_size);
 }
@@ -151,7 +154,7 @@ main{
     position: absolute;
     z-index: 2;
     top: 25%;
-    background-color: var(--background_color);
+    background-color: var(--background-color);
     padding: var(--block_size);
     width: calc(100% - var(--block_size) * 2);
 }
@@ -202,7 +205,8 @@ main{
         flex-direction: row;
         padding: var(--block_size);
         justify-content: space-between;
-        background-color: var(--default_color);
+        background-color: var(--darker_background_color);
+        color: var(--alt-font-color)
     }
 
     .main-content{
@@ -219,14 +223,15 @@ main{
     }
 
     .nav-active{
-        background-color: var(--background_color);
+        background-color: var(--darker_background_color);
         color: var(--font-color);
     }
 
     .mobile-feedback-button{
         border: unset;
         height: calc(var(--block_size) * 1.5);
-        background-color: var(--active_color);
+        background-color: var(--background-color);
+        color: var(--font-color);
     }
 
     .mobile-sidebar{
@@ -236,7 +241,6 @@ main{
         align-items: center;
         transform: translateX(calc(-100% - var(--block_size)));
         transition: 0.4s ease-out;
-        background-color: var(--background_color);
         margin: 0;
         width: 40svw;
         height: 100svh;
@@ -254,7 +258,7 @@ main{
     }
 
     .line{
-        background-color: var(--background_color);
+        background-color: var(--background-color);
         height: 4px;
         width: 100%;
         border-radius: 10px;
