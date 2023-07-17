@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <div class="black-screen hidden" onclick="hide_feedback_form()"></div>
-    <form class="feedback-form hidden">
+    <div class="black-screen hidden pop_up_form" onclick="hide_forms()"></div>
+    <form class="feedback-form hidden pop_up_form">
         <h3>Оставить Заявку</h3>
-        <button class="close-button" onclick="hide_feedback_form()">×</button>
+        <button class="close-button" onclick="hide_forms()">×</button>
         <div class="feedback-input">
             <input type="text" placeholder="Имя" name="Name">
             <input type="text" placeholder="Телефон" name="Phone">
@@ -23,13 +23,36 @@
         </p>
     </form>
 
+    <div class="calculator hidden pop_up_form">
+        <button class="close-button" onclick="hide_forms()">×</button>
+        <h3>Калькулятор стоимости строительного сайта</h1>
+        <form>
+            <label for="area">Площадь (в квадратных метрах):</label>
+            <input type="number" id="area" name="area" class="feedback-input">
+    
+            <label for="material">Материал:</label>
+            <select id="material" name="material" class="feedback-input">
+                <option value="wood">Дерево</option>
+                <option value="concrete">Бетон</option>
+                <option value="brick">Кирпич</option>
+            </select>
+    
+            <button type="button" class="button" onclick="calculateCost()">Рассчитать стоимость</button>
+        </form>
+    
+        <p id="totalCost"></p>
+    </div>
+
     <header>
         <section class="header-top mobile-hide">
             <div class="contacts">
                 <label>Адрес: <br> Baker Street 221b</label>
                 <label>Режим работы: <br> Никогда</label>
                 <label>Номер Телефона: <br> 8 800 555 35 35</label>
-                <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
+                <div>
+                    <button class="button" onclick="show_calculator_form()">Расчитать стоимость</button>
+                    <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
+                </div>
             </div>
         </section>
         <section class="header-bottom mobile-hide">
@@ -42,7 +65,7 @@
                     </div>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                     <div class="nav-dropdown">
                         <a>Lorem</a>
                         <a>Ipsum</a>
@@ -53,19 +76,19 @@
                     </div>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                 </div>
                 <div class="nav">
-                    <a>Категория</a>
+                    <a>Категория <img src="media/svg-editor-image (4).svg"></a>
                 </div>
         </section>
         <section class="mobile-show">
@@ -118,6 +141,48 @@
 
             </section>
         </main>
+    </div>
+    <div class="container main-footer-background">
+        <div class="main">
+            <footer class="main-footer">
+                <div class="main-footer-wrap">
+                    <div class="main-footer-comp">
+                        <div class="main-footer-comp-t">
+                            <p>Компания</p>
+                        </div>
+                        <div class="main-footer-comp-p">
+                            <a href="" class="main-footer-comp-p-text">Отзывы</a>
+                            <a href="" class="main-footer-comp-p-text">Дилерам</a>
+                            <a href="" class="main-footer-comp-p-text">Вакансии</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-services">
+                        <div class="main-footer-services-t">
+                            <p>Услуги</p>
+                        </div>
+                        <div class="main-footer-services-p">
+                            <a href="" class="main-footer-services-p-text">Остекление балконов и лоджий</a>
+                            <a href="" class="main-footer-services-p-text">Изготовление нестандартных окон</a>
+                            <a href="" class="main-footer-services-p-text">Установка пластиковых окон</a>
+                            <a href="" class="main-footer-services-p-text">Ремонт и сервисное обслуживание</a>
+                            <a href="" class="main-footer-services-p-text">Доставка</a>
+                            <a href="" class="main-footer-services-p-text">Арочная гибка профиля</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-contact">
+                        <div class="main-footer-contact-phone">
+                            <p>7 (3412) 32 60 65</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>okna@avgust.biz</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

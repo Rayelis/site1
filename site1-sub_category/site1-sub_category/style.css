@@ -19,6 +19,7 @@ body{
 }
 
 header{
+    font-size: calc(var(--font_size) * 0.8);
     display: flex;
     flex-direction: column;
 }
@@ -26,6 +27,7 @@ header{
 .header-top{
     background-color: var(--background_color);
     padding: var(--block_size);
+    background-image: url("media/bg.png");
 }
 
 .contacts{
@@ -39,6 +41,8 @@ header{
     background-color: var(--darker_background_color);
     color: var(--alt-font-color);
     border-radius: calc(var(--block_size) * 0.5);
+    height: calc(var(--block_size) * 1.7);
+    cursor: pointer;
 }
 
 .button:hover{
@@ -58,6 +62,15 @@ header{
     padding: calc(var(--block_size) * 0.5);
     padding-left: var(--block_size);
     padding-right: var(--block_size);
+    cursor: pointer;
+}
+
+.nav img{
+    filter: brightness(0);
+}
+
+.nav:hover img{
+    filter: brightness(100%);
 }
 
 .nav:hover{
@@ -65,8 +78,10 @@ header{
     color: var(--alt-font-color);
 }
 
+
+
 .nav:hover .nav-dropdown{
-    top: calc(var(--block_size) * 6.45);
+    top: calc(var(--block_size) * 5.8);
     opacity: 1;
     transform: translate(calc(var(--block_size) * -1), 0);
 }
@@ -93,6 +108,10 @@ header{
     color: var(--default_color);
 }
 
+.nav-active img{
+    filter: none;
+}
+
 .mobile-show{
     display: none;
 }
@@ -101,6 +120,7 @@ header{
     display: flex;
     flex-direction: row;
     background-color: var(--background_color);
+    height: calc(var(--block_size) * 28);
 }
 
 aside{
@@ -133,6 +153,7 @@ main{
     height: calc(var(--block_size) * 1.5);
     width: calc(var(--block_size) * 5);
     margin-right: var(--block_size);
+    cursor: pointer;
 }
 
 .main-content{
@@ -142,16 +163,17 @@ main{
 }
 
 .black-screen{
-    position: absolute;
+    position: fixed;
     background-color: black;
     opacity: 0.5;
     width: 100vw;
     height: 100vh;
     z-index: 1;
+    overflow: hidden;
 }
 
 .feedback-form{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 25%;
     background-color: var(--background-color);
@@ -161,8 +183,8 @@ main{
 
 .close-button{
     position: absolute;
-    top: 5%;
-    left: 95%;
+    top: 2%;
+    left: 90%;
     border: unset;
     background-color: unset;
     font-size: calc(var(--font_size) * 2);
@@ -187,6 +209,30 @@ main{
 .feedback-input > input:focus, input:active, input:hover{
     outline: none;
     border-color: var(--active_color);
+}
+
+.calculator{
+    position: absolute;
+    top: 20%;
+    left: 37.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-height: calc(var(--block_size) * 20);
+    width:  calc(var(--block_size) * 15);
+    z-index: 3;
+    background-color: var(--background-color);
+    border-radius: calc(var(--block_size));
+    padding: calc(var(--block_size));
+}
+
+.calculator > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator > form > *, .calculator > *{
+    margin-bottom: calc(var(--block_size) * 0.5);
 }
 
 @media (orientation: portrait) or (max-width:820px) {
@@ -345,4 +391,95 @@ main{
 
 .hidden {
     display: none;
+}
+
+.main-footer-background {
+    background-color: #363737;
+    width: 100%;
+    min-height: 100px;
+}
+
+.main-footer-wrap {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 0;
+}
+
+.main-footer-comp {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer-comp-p {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer-services {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-footer-services-p {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer-comp-t {
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+}
+
+.main-footer-comp-p {
+    margin-top: 30px;
+    gap: 10px 0;
+}
+
+.main-footer-comp-p-text {
+    font-weight: 300;
+    color: #9a9a9a;
+    font-size: 17px;
+}
+
+.main-footer-comp-p-text:hover {
+    color: #b7b7b7;
+}
+
+.main-footer-services-t {
+    font-size: 20px;
+    color: white;
+}
+
+.main-footer-services-p {
+    margin-top: 30px;
+    gap: 10px 0;
+}
+
+.main-footer-services-p-text {
+    font-weight: 300;
+    color: #9a9a9a;
+    font-size: 17px;
+}
+
+.main-footer-services-p-text:hover {
+    color: #b7b7b7;
+}
+
+.main-footer-contact {
+    font-size: 18px;
+    display: flex;
+    gap: 25px;
+}
+
+.main-footer-contact-phone,
+.main-footer-contact-email,
+.main-footer-contact-address {
+    color: white;
 }

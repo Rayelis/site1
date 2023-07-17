@@ -41,7 +41,6 @@ function show_black_screen(){
     window.onscroll = function () {
         window.scrollTo(scrollLeft, scrollTop);
     };
-
 }
 
 function hide_black_screen(){
@@ -68,7 +67,7 @@ function hide_forms(){
     forms.forEach( form =>{
         form.classList.add("hidden")
     })
-
+    
 }
 
 
