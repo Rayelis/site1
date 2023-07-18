@@ -24,6 +24,11 @@ header{
     flex-direction: column;
 }
 
+a{
+    text-decoration: none;
+    color: initial;
+}
+
 .header-top{
     background-color: var(--background_color);
     padding: var(--block_size);
