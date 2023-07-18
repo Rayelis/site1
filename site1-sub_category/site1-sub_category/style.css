@@ -120,7 +120,7 @@ header{
     display: flex;
     flex-direction: row;
     background-color: var(--background_color);
-    height: calc(var(--block_size) * 28);
+    height: calc(var(--block_size) * 24);
     margin-left: var(--block_size);
 }
 
