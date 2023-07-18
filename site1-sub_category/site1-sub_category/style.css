@@ -33,6 +33,8 @@ a{
     background-color: var(--background_color);
     padding: var(--block_size);
     background-image: url("media/bg.png");
+    padding-left: calc(var(--block_size) * 8);
+    padding-right: calc(var(--block_size) * 8);
 }
 
 .contacts{
@@ -126,7 +128,8 @@ a{
     display: flex;
     flex-direction: row;
     background-color: var(--background_color);
-    height: calc(var(--block_size) * 24);
+    min-height: calc(var(--block_size) * 24);
+    height: fit-content;
     margin-left: var(--block_size);
 }
 
