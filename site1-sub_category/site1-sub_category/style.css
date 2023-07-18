@@ -19,7 +19,7 @@ body{
 }
 
 header{
-    font-size: calc(var(--font_size) * 0.8);
+    font-size: calc(var(--font_size) * 0.7);
     display: flex;
     flex-direction: column;
 }
@@ -56,6 +56,8 @@ header{
     background-color: var(--background-color);
     color: var(--font-color);
     box-shadow: 0 0 5px 1px;
+    padding-left: calc(var(--block_size) * 8);
+    padding-right: calc(var(--block_size) * 8);
 }
 
 .nav{
@@ -63,6 +65,7 @@ header{
     padding-left: var(--block_size);
     padding-right: var(--block_size);
     cursor: pointer;
+    min-width: fit-content;
 }
 
 .nav img{
@@ -78,10 +81,8 @@ header{
     color: var(--alt-font-color);
 }
 
-
-
 .nav:hover .nav-dropdown{
-    top: calc(var(--block_size) * 5.8);
+    top: calc(var(--block_size) * 5.4);
     opacity: 1;
     transform: translate(calc(var(--block_size) * -1), 0);
 }
