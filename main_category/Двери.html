@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main_category.css">
+    <title>Двери</title>
+</head>
+<body>
+    <div class="black-screen hidden pop_up_form" onclick="hide_forms()"></div>
+    <form class="feedback-form hidden pop_up_form">
+        <h3>Оставить Заявку</h3>
+        <button class="close-button" onclick="hide_forms()">×</button>
+        <div class="feedback-input">
+            <input type="text" placeholder="Имя" name="Name">
+            <input type="text" placeholder="Телефон" name="Phone">
+            <input type="submit" value="Отправить" name="Feedback_submit" class="button">
+        </div>
+    
+        <p><input type="checkbox" name="Policy">Нажимая на кнопку, вы даете согласие на обработку своих
+            персональных данных и соглашаетесь с политикой конфиденциальности
+        </p>
+    </form>
+
+    <div class="calculator hidden pop_up_form">
+        <button class="close-button" onclick="hide_forms()">×</button>
+        <h3>Калькулятор стоимости строительного сайта</h1>
+            <form>
+                <label for="area">Площадь (в квадратных метрах):</label>
+                <input type="number" id="area" name="area" class="feedback-input">
+    
+                <label for="material">Материал:</label>
+                <select id="material" name="material" class="feedback-input">
+                    <option value="wood">Дерево</option>
+                    <option value="concrete">Бетон</option>
+                    <option value="brick">Кирпич</option>
+                </select>
+    
+                <button type="button" class="button" onclick="calculateCost()">Рассчитать стоимость</button>
+            </form>
+    
+            <p id="totalCost"></p>
+    </div>
+
+    <header>
+        <section class="header-top mobile-hide">
+            <div class="contacts">
+                <label>Адрес: <br> Baker Street 221b</label>
+                <label>Режим работы: <br> Никогда</label>
+                <label>Номер Телефона: <br> 8 800 555 35 35</label>
+                <div>
+                    <button class="button" onclick="show_calculator_form()">Расчитать стоимость</button>
+                    <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="header-bottom mobile-hide">
+            <div class="nav">
+                <a href="окна.html">Окна<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a>ПВХ</a>
+                    <a>Алюминий</a>
+                </div>
+            </div>
+            <div class="nav nav-active">
+                <a href="двери.html">Двери<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a>ПВХ</a>
+                    <a>Алюминий</a>
+                    <a>Лофт</a>
+                    <a>Скрытые</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="витраж.html">Витраж <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a>ПВХ</a>
+                    <a>Алюминий</a>
+                    <a>Зимний сад</a>
+                    <a>Безрамочное остекление</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="каркасные дома.html">Каркасные дома <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a>Навесы</a>
+                    <a>Крыши</a>
+                    <a>Каркасы</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="ворота.html">Ворота<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="роллеты.html">Роллеты<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="ремонт.html">Ремонт<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+        </section>
+        <section class="mobile-show">
+            <input type="checkbox" class="nav-checkbox" onclick="show_sidebar()">
+    
+            <div class="burger">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <button class="mobile-feedback-button" onclick="show_feedback_form()">Оставить заявку</button>
+        </section>
+    </header>
+
+    <div class="content">
+        <aside>
+            <div class="sidebar">
+                <ul class="categories">
+                    <li class="category">
+                        <a href="#">Окна</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Окна ПВХ</a></li>
+                            <li><a href="#">Окна Алюминий</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Двери</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Двери ПВХ</a></li>
+                            <li><a href="#">Двери Алюминий</a></li>
+                            <li><a href="#">Двери Лофт</a></li>
+                            <li><a href="#">Двери Скрытые</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Витраж</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Витраж Алюминий</a></li>
+                            <li><a href="#">Витраж ПВХ</a></li>
+                            <li><a href="#">Витраж Зимний Сад</a></li>
+                            <li><a href="#">Витраж Безрамочное остекление</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Каркасные дома</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Навесы</a></li>
+                            <li><a href="#">Крыши</a></li>
+                            <li><a href="#">Каркасы</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Ворота</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Ворота?</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Роллеты</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Роллеты</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#">Ремонт</a>
+                        <ul class="subcategories">
+                            <li><a href="#">Внутренняя отделка</a></li>
+                            <li><a href="#">Внешняя отделка</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <main>
+            <div class="tint">
+                <section class="main_category_section">Двери ПВХ</section>
+                <section class="main_category_section">Двери Алюминий</section>
+                <section class="main_category_section">Двери Лофт</section>
+                <section class="main_category_section">Скрытые Двери</section>
+            </div>
+        </main>
+    </div>
+    <div class="container main-footer-background">
+        <div class="main">
+            <footer class="main-footer">
+                <div class="main-footer-wrap">
+                    <div class="main-footer-comp">
+                        <div class="main-footer-comp-t">
+                            <p>Компания</p>
+                        </div>
+                        <div class="main-footer-comp-p">
+                            <a href="" class="main-footer-comp-p-text">Отзывы</a>
+                            <a href="" class="main-footer-comp-p-text">Дилерам</a>
+                            <a href="" class="main-footer-comp-p-text">Вакансии</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-services">
+                        <div class="main-footer-services-t">
+                            <p>Услуги</p>
+                        </div>
+                        <div class="main-footer-services-p">
+                            <a href="" class="main-footer-services-p-text">Остекление балконов и лоджий</a>
+                            <a href="" class="main-footer-services-p-text">Изготовление нестандартных окон</a>
+                            <a href="" class="main-footer-services-p-text">Установка пластиковых окон</a>
+                            <a href="" class="main-footer-services-p-text">Ремонт и сервисное обслуживание</a>
+                            <a href="" class="main-footer-services-p-text">Доставка</a>
+                            <a href="" class="main-footer-services-p-text">Арочная гибка профиля</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-contact">
+                        <div class="main-footer-contact-phone">
+                            <p>7 (3412) 32 60 65</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>okna@avgust.biz</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
