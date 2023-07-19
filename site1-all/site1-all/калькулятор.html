@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор стоимости строительного сайта</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 20%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #totalCost {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function calculateCost() {
+      var area = document.getElementById("area").value;
+      var material = document.getElementById("material").value;
+      var costPerSquareMeter = 0;
+
+      // Определение стоимости за квадратный метр в зависимости от выбранного материала
+      if (material === "wood") {
+        costPerSquareMeter = 1000;
+      } else if (material === "concrete") {
+        costPerSquareMeter = 1500;
+      } else if (material === "brick") {
+        costPerSquareMeter = 1200;
+      }
+
+      // Вычисление общей стоимости
+      var totalCost = area * costPerSquareMeter;
+
+      // Отображение стоимости на странице
+      document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
+    }
+  </script>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Калькулятор стоимости строительного сайта</h1>
+    <form>
+      <label for="area">Площадь (в квадратных метрах):</label>
+      <input type="number" id="area" name="area" required>
+
+      <label for="material">Материал:</label>
+      <select id="material" name="material">
+        <option value="wood">Дерево</option>
+        <option value="concrete">Бетон</option>
+        <option value="brick">Кирпич</option>
+      </select>
+
+      <button type="button" onclick="calculateCost()">Рассчитать стоимость</button>
+    </form>
+
+    <p id="totalCost"></p>
+  </div>
+</body>
+</html>
