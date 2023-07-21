@@ -114,3 +114,26 @@ function calculateCost() {
       // Отображение стоимости на странице
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
     }
+
+window.onload = () => {
+    let map_block = document.querySelector(".main-footer-services")
+
+    map_block.innerHTML = `<div style="position:relative;overflow:hidden;width:inherit"><a
+                                href="https://yandex.ru/maps/44/izhevsk/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:0px;">Ижевск</a><a
+                                href="https://yandex.ru/maps/-/CLh26tB"
+                                style="color:#eee;font-size:12px;position:absolute;top:14px;">Проезд имени Дерябина,
+                            2/50 — Яндекс Карты</a>
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=53.187786%2C56.842407&mode=whatshere&whatshere%5Bpoint%5D=53.184968%2C56.841827&whatshere%5Bzoom%5D=17&z=17.15"
+                                    width="100%" height="600px" frameborder="1" allowfullscreen="true"
+                                    style="position:relative;"></iframe>
+                        </div>`
+
+    let header_top_block = document.querySelector(".header-top")
+
+    buffer = header_top_block.innerHTML
+
+    header_top_block.innerHTML = `<button class="button" href="../../main_page/src/index.html">На главную</button>`
+
+    header_top_block.innerHTML += buffer
+}

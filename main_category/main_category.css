@@ -33,9 +33,13 @@ header {
 }
 
 .header-top {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     background-color: var(--background_color);
     padding: var(--block_size);
     background-image: url("media/bg.png");
+    padding-left: calc(var(--block_size) * 6);
+    padding-right: calc(var(--block_size) * 6);
 }
 
 .contacts {
@@ -51,6 +55,8 @@ header {
     border-radius: calc(var(--block_size) * 0.5);
     height: calc(var(--block_size) * 1.7);
     cursor: pointer;
+    width: fit-content;
+    padding: calc(var(--block_size) * 0.3);
 }
 
 .button:hover {

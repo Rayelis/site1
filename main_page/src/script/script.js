@@ -41,6 +41,7 @@ function show_black_screen(){
     window.onscroll = function () {
         window.scrollTo(scrollLeft, scrollTop);
     };
+
 }
 
 function hide_black_screen(){
@@ -67,7 +68,7 @@ function hide_forms(){
     forms.forEach( form =>{
         form.classList.add("hidden")
     })
-    
+
 }
 
 
@@ -113,3 +114,14 @@ function calculateCost() {
       // Отображение стоимости на странице
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
     }
+
+window.onload = () => {
+
+    let header_top_block = document.querySelector(".header-top")
+
+    buffer = header_top_block.innerHTML
+
+    header_top_block.innerHTML = `<button class="button" href="../../main_page/src/index.html">На главную</button>`
+
+    header_top_block.innerHTML += buffer
+}
