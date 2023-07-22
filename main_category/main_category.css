@@ -348,9 +348,14 @@ input:hover {
 
 }
 
-.main-footer-services-p {
-    display: flex;
-    flex-direction: column;
+.main-footer-services {
+    height: calc(var(--block_size) * 16);
+    width: calc(var(--block_size) * 24);
+}
+
+.main-footer-services>* {
+    height: inherit;
+    width: inherit;
 }
 
 .main-footer-contact {

@@ -356,9 +356,13 @@ main{
 }
 
 .main-footer-services {
-    display: flex;
-    flex-direction: column;
+    height: calc(var(--block_size) * 16);
+    width: calc(var(--block_size) * 24);;
+}
 
+.main-footer-services > *{
+    height: inherit;
+    width: inherit;
 }
 
 .main-footer-services-p {

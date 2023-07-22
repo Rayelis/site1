@@ -775,6 +775,10 @@ header {
     display: none;
 }
 
+.mobile-sidebar{
+    display: none;
+}
+
 @media (orientation: portrait) or (max-width:820px) {
     .mobile-hide {
         display: none;
@@ -962,6 +966,8 @@ header {
     }
 
 }
+
+
 
 .hidden {
     display: none;
