@@ -124,4 +124,19 @@ window.onload = () => {
     header_top_block.innerHTML = `<button class="button" href="../../main_page/src/index.html">На главную</button>`
 
     header_top_block.innerHTML += buffer
+
+    let contacts = document.querySelector(".main-footer-contact")
+
+    contacts.innerHTML = `<div class="main-footer-contact-phone">
+                            <p>Телефон:</p>
+                            <p>7 (3412) 32 60 65</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>Почта:</p>
+                            <p>okna@avgust.biz</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>Адрес:</p>
+                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                        </div>`
 }
