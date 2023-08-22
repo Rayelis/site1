@@ -123,8 +123,11 @@ function calculateCost() {
 
         fetch(`http:${host}/api/v1/email/send`, {
             method: "post",
+            headers: {
+                'Content-type': 'application/json'
+            },
             body: JSON.stringify({
-                name: name,
+                firstName: name,
                 phone: phone
             })
         })
