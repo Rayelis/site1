@@ -99,19 +99,19 @@
     </div>
 
     <div class="black-screen hidden" onclick="hide_forms()"></div>
-    <form class="feedback-form hidden pop_up_form">
+    <div class="feedback-form hidden pop_up_form">
         <h3>Оставить Заявку</h3>
         <button class="close-button" onclick="hide_forms()">×</button>
         <div class="feedback-input">
             <input type="text" placeholder="Имя" name="Name">
             <input type="text" placeholder="Телефон" name="Phone">
-            <input type="submit" value="Отправить" name="Feedback_submit" class="button">
+            <input type="submit" value="Отправить" name="Feedback_submit" class="button" onclick="submit_form()" onsubmit="event.preventDefault()">
         </div>
     
         <p><input type="checkbox" name="Policy">Нажимая на кнопку, вы даете согласие на обработку своих
             персональных данных и соглашаетесь с политикой конфиденциальности
         </p>
-    </form>
+    </div>
 
     <header>
         <section class="header-top mobile-hide">

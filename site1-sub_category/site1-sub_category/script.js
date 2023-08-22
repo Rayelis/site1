@@ -115,6 +115,21 @@ function calculateCost() {
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
     }
 
+    function submit_form(){
+        const name = document.querySelector(".feedback-form input[name=Name]").value
+        const phone = document.querySelector(".feedback-form input[name=Phone]").value
+
+        const host = window.location.hostname === '' ? 'localhost' : window.location.hostname
+
+        fetch(`http:${host}/api/v1/email/send`, {
+            method: "post",
+            body: JSON.stringify({
+                name: name,
+                phone: phone
+            })
+        })
+    }
+
 window.onload = () => {
     let map_block = document.querySelector(".main-footer-services")
 

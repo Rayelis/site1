@@ -115,13 +115,35 @@ function calculateCost() {
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
     }
 
+    function submit_form(){
+        const name = document.querySelector(".feedback-form input[name=Name]").value
+        const phone = document.querySelector(".feedback-form input[name=Phone]").value
+
+        const host = window.location.hostname === '' ? 'localhost' : window.location.hostname
+
+        fetch(`http:${host}/api/v1/email/send`, {
+            method: "post",
+            body: JSON.stringify({
+                name: name,
+                phone: phone
+            })
+        })
+    }
+
 window.onload = () => {
+    let map_block = document.querySelector(".main-footer-services")
+
+    map_block.innerHTML = `<div style="position:relative;overflow:hidden;width:inherit">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=53.187786%2C56.842407&mode=whatshere&whatshere%5Bpoint%5D=53.184968%2C56.841827&whatshere%5Bzoom%5D=17&z=17.15"
+                                    width="100%" height="600px" frameborder="1" allowfullscreen="true"
+                                    style="position:relative;"></iframe>
+                        </div>`
 
     let header_top_block = document.querySelector(".header-top")
 
     buffer = header_top_block.innerHTML
 
-    header_top_block.innerHTML = `<button class="button" href="../../main_page/src/index.html">На главную</button>`
+    header_top_block.innerHTML = `<button class="button" onclick="window.location='../../main_page/src/index.html'">На главную</button>`
 
     header_top_block.innerHTML += buffer
 
