@@ -131,6 +131,8 @@ function calculateCost() {
                 phone: phone
             })
         })
+
+        hide_forms()
     }
 
 window.onload = () => {
