@@ -154,6 +154,21 @@ a {
     background-color: rgba(21, 21, 21, 0.26);
     background-blend-mode: multiply;
 }
+.catalog-service-cart-background-5 {
+    background:  url('../img/5.jpg') no-repeat center /cover;
+    background-color: rgba(21, 21, 21, 0.26);
+    background-blend-mode: multiply;
+}
+.catalog-service-cart-background-6 {
+    background:  url('../img/6.jpg') no-repeat center /cover;
+    background-color: rgba(21, 21, 21, 0.26);
+    background-blend-mode: multiply;
+}
+.catalog-service-cart-background-7 {
+    background:  url('../img/7.png') no-repeat center /cover;
+    background-color: rgba(21, 21, 21, 0.26);
+    background-blend-mode: multiply;
+}
 .catalog-service-cart-text {
     font-weight: 500;
     font-size: 20px;

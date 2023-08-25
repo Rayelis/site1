@@ -138,7 +138,7 @@ function calculateCost() {
 window.onload = () => {
     let map_block = document.querySelector(".main-footer-services")
 
-    map_block.innerHTML = `<div style="position:relative;overflow:hidden;width:inherit">
+    map_block.innerHTML = `<div style="position:relative;overflow:hidden;width:600px;">
                             <iframe src="https://yandex.ru/map-widget/v1/?ll=53.187786%2C56.842407&mode=whatshere&whatshere%5Bpoint%5D=53.184968%2C56.841827&whatshere%5Bzoom%5D=17&z=17.15"
                                     width="100%" height="600px" frameborder="1" allowfullscreen="true"
                                     style="position:relative;"></iframe>
@@ -156,14 +156,14 @@ window.onload = () => {
 
     contacts.innerHTML = `<div class="main-footer-contact-phone">
                             <p>Телефон:</p>
-                            <p>7 (3412) 32 60 65</p>
+                            <p>+7 (909) 053-26-26</p>
                         </div>
                         <div class="main-footer-contact-email">
                             <p>Почта:</p>
-                            <p>okna@avgust.biz</p>
+                            <p>montazh18@bk.ru</p>
                         </div>
                         <div class="main-footer-contact-address">
                             <p>Адрес:</p>
-                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                            <p>г. Ижевск, проезд имени Дерябина, 2/50</p>
                         </div>`
 }

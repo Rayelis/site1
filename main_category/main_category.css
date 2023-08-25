@@ -599,3 +599,64 @@ input:hover {
 .hidden {
     display: none;
 }
+
+#okna_1 {
+    background-image: url("media/окн_пвх.jpg");
+}
+
+#okna_2 {
+    background-image: url("media/окна_алюминий.jpg");
+}
+
+#rollets {
+    background-image: url("media/роллеты.jpg");
+}
+
+#remont_1 {
+    background-image: url("media/ремонт_внутр.jpg");
+}
+
+#remont_2 {
+    background-image: url("media/ремонт_внеш.jpg");
+}
+
+#door_1 {
+    background-image: url("media/двери_пвх.jpg");
+}
+
+#door_2 {
+    background-image: url("media/двери_алюминий.jpg");
+}
+
+#door_3 {
+    background-image: url("media/двери_лофт.jpg");
+}
+
+#door_4 {
+    background-image: url("media/двери_скрытые.jpg");
+}
+
+#vitr_1 {
+    background-image: url("media/витраж_алюминий.jpg");
+}
+#vitr_2 {
+    background-image: url("media/витраж_пвх.jpg");
+}
+#vitr_3 {
+    background-image: url("media/витраж_зимний_сад.jpg");
+}
+#vitr_4 {
+    background-image: url("media/витраж_безрамочное_остекление.jpg");
+}
+#vorota {
+    background-image: url("media/ворота.jpg");
+}
+#construct_1 {
+    background-image: url("media/каркас_навесы.jpg");
+}
+#construct_2 {
+    background-image: url("media/каркас_крыши.jpg");
+}
+#construct_3 {
+    background-image: url("media/каркас_каркасы.jpg");
+}

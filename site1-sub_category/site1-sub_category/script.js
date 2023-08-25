@@ -156,14 +156,14 @@ window.onload = () => {
 
     contacts.innerHTML = `<div class="main-footer-contact-phone">
                             <p>Телефон:</p>
-                            <p>7 (3412) 32 60 65</p>
+                            <p>+7 (909) 053-26-26</p>
                         </div>
                         <div class="main-footer-contact-email">
                             <p>Почта:</p>
-                            <p>okna@avgust.biz</p>
+                            <p>montazh18@bk.ru</p>
                         </div>
                         <div class="main-footer-contact-address">
                             <p>Адрес:</p>
-                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                            <p>г. Ижевск, проезд имени Дерябина, 2/50</p>
                         </div>`
 }
