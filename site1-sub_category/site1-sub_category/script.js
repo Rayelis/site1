@@ -113,7 +113,7 @@ function calculateCost() {
 
       // Отображение стоимости на странице
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
-    }
+}
 
     function submit_form(){
         const name = document.querySelector(".feedback-form input[name=Name]").value
@@ -133,7 +133,36 @@ function calculateCost() {
         })
 
         hide_forms()
-    }
+}
+
+let selected_window = 0
+
+let window_price_array = [10, 20, 30, Math.sqrt(2), 1024, 1337] //ЦЕНЫ СПЕЦИАЛЬНО ВЫНЕС ВОТ СЮДАААААААААААААА
+
+function calc_sum(){
+    let place_to_write = document.querySelector(".main-calc-sum-label")
+
+    let height = document.querySelector(".param1").value
+    if(!height){return}
+
+    let width = document.querySelector(".param2").value
+    if(!width){return}
+
+    let final_price = (height * width) * window_price_array[selected_window]
+
+    place_to_write.innerHTML = final_price
+}
+
+function window_change(Element){
+    let buttons = [...document.querySelectorAll(".window-toggle-button")]
+
+    buttons.forEach(button => {
+        button.classList.remove("button-active")
+    })
+    Element.classList.add("button-active")
+
+    selected_window = buttons.indexOf(Element)
+}
 
 window.onload = () => {
     let map_block = document.querySelector(".main-footer-services")
