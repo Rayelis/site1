@@ -137,7 +137,7 @@ function calculateCost() {
 
 let selected_window = 0
 
-let window_price_array = [10, 20, 30, Math.sqrt(2), 1024, 1337] //ЦЕНЫ СПЕЦИАЛЬНО ВЫНЕС ВОТ СЮДАААААААААААААА
+let window_price_array = [10, 20, 30] //ЦЕНЫ СПЕЦИАЛЬНО ВЫНЕС ВОТ СЮДАААААААААААААА
 
 function calc_sum(){
     let place_to_write = document.querySelector(".main-calc-sum-label")
