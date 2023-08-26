@@ -196,16 +196,17 @@
                     </p>
                     <p>
 
-                    <div>
+                    <div class="content-additional">
                         <div class="main-content-block">
-                            <div class="schmitz">
+                            <div class="main-content-item">
                                 <img src="media/schmitz.png">
                             </div>
-                            <div class="schmitz">
+                            <div class="main-content-item">
                                 <img src="media/schmitz.png">
                             </div>
                         </div>
-                    <p><center><h2>С окнами покупают</h2></center></p>
+                    
+                        <h2>С окнами покупают</h2>
 
                         <div class="main-content-block">
                             <div class="main-content-price-block">
@@ -223,39 +224,6 @@
                             <div class="main-content-price-block">
                                 <img src="media/dop4.jpg">
                                 <label>600 руб.</label>
-                            </div>
-                        </div>
-                        <div class="main-content-calc">
-                            <div class="calc-input-params">
-                                <input type="text" class="calc-param param1" value="800">
-                                X
-                                <input type="text" class="calc-param param2" value="800">
-                            </div>
-                            <div class="button-row">
-                                <button onclick="window_change(this)" class="window-toggle-button button-active">
-                                    <img src="#">
-                                </button>
-                                <button onclick="window_change(this)" class="window-toggle-button">
-                                    <img src="#">
-                                </button>
-                                <button onclick="window_change(this)" class="window-toggle-button">
-                                    <img src="#3">
-                                </button>
-                            </div>
-                            <div class="main-calc-block">
-                                <img src="#" class="main-calc-image">
-                            </div>
-                            <div class="main-calc-choises">
-                                <div class="main-calc-cameras">
-                                    <button ></button>
-                                </div>
-                                <div class="main-calc-sp">
-
-                                </div>
-                            </div>
-                            <div class="main-calc-sum-block">
-                                <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
-                                <label class="main-calc-sum-label"></label>
                             </div>
                         </div>
                     </div>
@@ -277,6 +245,49 @@
                 </div>
 
             </section>
+
+            <section class="calc-section">
+                <div class="main-content-calc">
+                    <div class="calc-options">
+                        <div class="button-row">
+                            <button onclick="window_change(this)" class="window-toggle-button button-active">
+                                <img src="#">
+                            </button>
+                            <button onclick="window_change(this)" class="window-toggle-button">
+                                <img src="#">
+                            </button>
+                            <button onclick="window_change(this)" class="window-toggle-button">
+                                <img src="#3">
+                            </button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-cameras">
+                            <label>Окна какие-то</label>
+                            <button class="calc-button-active" onclick="change_active(this); selected_type1 = 0">Трёхкамерные</button>
+                            <button onclick="change_active(this); selected_type1 = 1">Пятикамерные</button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-sp">
+                            <label>Окна другие-то</label>
+                            <button class="calc-button-active" onclick="change_active(this); selected_type2 = 0">СПО-24</button>
+                            <button onclick="change_active(this); selected_type2 = 1">СПД-32</button>
+                        </div>
+                    </div>
+                    <div class="calc-display">
+                        <div class="calc-input-params">
+                            <input type="text" class="calc-param param1" value="800">
+                            X
+                            <input type="text" class="calc-param param2" value="800">
+                        </div>
+                        <div class="main-calc-block">
+                            <img src="#" class="main-calc-image">
+                        </div>
+                    </div>
+                    <div class="main-calc-sum-block">
+                        <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
+                        <label class="main-calc-sum-label"></label>
+                    </div>
+                </div>
+            </section>
+            
         </main>
     </div>
     <div class="container main-footer-background">

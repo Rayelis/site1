@@ -442,6 +442,11 @@ main{
     aspect-ratio: 1 / 1;
 }
 
+.main-content-item > img{
+    height: inherit;
+    width: inherit;
+}
+
 .main-content-price-block{
     display: flex;
     flex-direction: column;
@@ -449,7 +454,7 @@ main{
 }
 
 .main-content-price-block img{
-    flex-grow: 2;
+    height: calc(100% - var(--block_size) * 1.5);
 }
 
 .main-content-price-block label{
@@ -481,9 +486,9 @@ main{
 
 .main-content-calc{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
+    gap: calc(var(--block_size) * 1);
 }
 
 .button-row{
@@ -492,7 +497,6 @@ main{
     justify-content: center;
     align-items: center;
     gap: calc(var(--block_size) * 0.5);
-    margin: calc(var(--block_size) * 0.5);
 }
 
 .button-row button{
@@ -514,7 +518,6 @@ main{
     gap: calc(var(--block_size));
     justify-content: center;
     align-items: center;
-    margin: calc(var(--block_size) * 0.5);
     
 }
 
@@ -539,7 +542,8 @@ main{
 .main-calc-sum-block{
     display: flex;
     flex-direction: column;
-    margin: calc(var(--block_size) * 0.5);
+    padding: var(--block_size);
+    background-color: var(--background-color);
 }
 
 .main-calc-sum-button{
@@ -560,7 +564,56 @@ main{
     text-align: center;
 }
 
+.main-calc-choises{
+    display: flex;
+    flex-direction: row;
+    gap: var(--block_size);
+    margin: calc(var(--block_size) * 0.5);
+}
 
+.main-calc-choise-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--block_size) * 0.5);
+}
+
+.calc-section{
+    margin-top: var(--block_size);
+    margin-right: calc(var(--block_size) * 7);
+}
+
+.calc-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--block_size);
+    background-color: var(--background-color);
+    gap: calc(var(--block_size) * 0.5)
+}
+
+.calc-options{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: calc(var(--block_size) * 1);
+}
+
+.calc-options div{
+    padding: var(--block_size);
+    background-color: var(--background-color);
+}
+
+.main-calc-choise-buttons button{
+    border-radius: var(--block_size);
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.main-calc-choise-buttons .calc-button-active{
+    background-color: var(--darker_background_color);
+    color: var(--background-color);
+}
 
 @media (orientation: portrait) or (max-width:820px) {
     .mobile-hide {
@@ -746,17 +799,4 @@ main{
 
 .hidden {
     display: none;
-}
-
-.schmitz {
-    border-style: solid ;
-}
-
-.schmitz img{
-    width: 180px;
-    height: 180px;
-}
-
-.imgss img{
-    margin: 75px;
 }

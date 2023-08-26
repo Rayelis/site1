@@ -137,7 +137,12 @@ function calculateCost() {
 
 let selected_window = 0
 
+let selected_type1 = 0
+let selected_type2 = 0
+
 let window_price_array = [10, 20, 30] //ЦЕНЫ СПЕЦИАЛЬНО ВЫНЕС ВОТ СЮДАААААААААААААА
+let type1_array = [1, 2]
+let type2_array = [1, 2]
 
 function calc_sum(){
     let place_to_write = document.querySelector(".main-calc-sum-label")
@@ -148,7 +153,7 @@ function calc_sum(){
     let width = document.querySelector(".param2").value
     if(!width){return}
 
-    let final_price = (height * width) * window_price_array[selected_window]
+    let final_price = (height * width) * window_price_array[selected_window] * type1_array[selected_type1] * type2_array[selected_type2]
 
     place_to_write.innerHTML = final_price
 }
@@ -162,6 +167,16 @@ function window_change(Element){
     Element.classList.add("button-active")
 
     selected_window = buttons.indexOf(Element)
+}
+
+function change_active(Element){
+    let buttons = [...Element.parentNode.querySelectorAll('button')]
+
+    buttons.forEach( button => {
+        button.classList.remove("calc-button-active")
+    })
+
+    Element.classList.add("calc-button-active")
 }
 
 window.onload = () => {

@@ -242,12 +242,13 @@
                             <img src="media/UJ401-Z8.jpg">
                         </div>
                     </div>
-                    <div class="main-content-calc">
-                        <div class="calc-input-params">
-                            <input type="text" class="calc-param param1" value="800">
-                            X
-                            <input type="text" class="calc-param param2" value="800">
-                        </div>
+                </div>
+
+            </section>
+
+            <section class="calc-section">
+                <div class="main-content-calc">
+                    <div class="calc-options">
                         <div class="button-row">
                             <button onclick="window_change(this)" class="window-toggle-button button-active">
                                 <img src="#">
@@ -259,17 +260,35 @@
                                 <img src="#3">
                             </button>
                         </div>
+                        <div class="main-calc-choise-buttons calc-cameras">
+                            <label>Окна какие-то</label>
+                            <button class="calc-button-active"
+                                onclick="change_active(this); selected_type1 = 0">Трёхкамерные</button>
+                            <button onclick="change_active(this); selected_type1 = 1">Пятикамерные</button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-sp">
+                            <label>Окна другие-то</label>
+                            <button class="calc-button-active" onclick="change_active(this); selected_type2 = 0">СПО-24</button>
+                            <button onclick="change_active(this); selected_type2 = 1">СПД-32</button>
+                        </div>
+                    </div>
+                    <div class="calc-display">
+                        <div class="calc-input-params">
+                            <input type="text" class="calc-param param1" value="800">
+                            X
+                            <input type="text" class="calc-param param2" value="800">
+                        </div>
                         <div class="main-calc-block">
                             <img src="#" class="main-calc-image">
                         </div>
-                        <div class="main-calc-sum-block">
-                            <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
-                            <label class="main-calc-sum-label"></label>
-                        </div>
+                    </div>
+                    <div class="main-calc-sum-block">
+                        <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
+                        <label class="main-calc-sum-label"></label>
                     </div>
                 </div>
-
             </section>
+
         </main>
     </div>
     <div class="container main-footer-background">
