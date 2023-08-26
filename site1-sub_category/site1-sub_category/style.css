@@ -437,8 +437,8 @@ main{
 
 .main-content-block div{
     height: calc(var(--block_size) * 6);
-    border-style: solid;
     border-width: 1px;
+    /*border-style: solid;*/
     aspect-ratio: 1 / 1;
 }
 
@@ -746,4 +746,17 @@ main{
 
 .hidden {
     display: none;
+}
+
+.schmitz {
+    border-style: solid ;
+}
+
+.schmitz img{
+    width: 180px;
+    height: 180px;
+}
+
+.imgss img{
+    margin: 75px;
 }
