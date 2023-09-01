@@ -192,7 +192,7 @@ window.onload = () => {
 
     buffer = header_top_block.innerHTML
 
-    header_top_block.innerHTML = `<button class="button" onclick="window.location='../../main_page/src/index.html'">На главную</button>`
+    header_top_block.innerHTML = `<button class="button" onclick="window.location='../../index.html'">На главную</button>`
 
     header_top_block.innerHTML += buffer
 

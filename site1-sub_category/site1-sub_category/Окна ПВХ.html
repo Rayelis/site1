@@ -118,7 +118,7 @@
             <div class="sidebar">
                 <ul class="categories">
                     <li class="category">
-                        <a href="../../main_page/src/index.html"><b>На Главную</b></a>
+                        <a href="../../index.html"><b>На Главную</b></a>
                     </li>
                     <li class="category">
                         <a href="../../main_category/Окна.html">Окна</a>
@@ -178,7 +178,8 @@
         <main>
             <section class="main-nav">
                 <button class="main-nav-button nav-active" onclick="change_text(this)">Описание</button>
-                <button class="main-nav-button nav-passive" onclick="change_text(this)">Цены</button>
+                <button class="main-nav-button nav-passive" onclick="change_text(this)">Ламинация</button>
+                <button class="main-nav-button nav-passive" onclick="change_text(this)">Фурнитура</button>
             </section>
             
             <section class="main-content">
@@ -190,23 +191,21 @@
                     <p>
                         В своей работе мы используем только качественные профильные системы проверенных и хорошо зарекомендовавших себя производителей!
                         По приемлемым ценам предоставляем заказчикам выбор лучших светопрозрачных конструкций
-                        Армирование
-                        Пвх профиль Schmitz
-                        Оконная фурнитура зигение
                     </p>
-                    <p>
+                    <p>Трехкамерное исполнение профильной системы Schmitz делает окна более доступными по цене, а благодаря улучшенным показателям изоляции и двухкамерному стеклопакету обеспечивает сохранность тепла в зимний период года на высоком уровне.</p>
+                    <p>5-ти камерная система монтажной шириной 70мм, объединяющая в себе инновационные немецкие технологии в области экструзии и улучшенные показатели адаптации к российскому климату. Белая поверхность профиля придает изысканности и элегантности домашнему интерьеру и способствует легкому удалению пыли и иных загрязнений.</p>
 
                     <div class="content-additional">
                         <div class="main-content-block">
                             <div class="main-content-item">
-                                <img src="media/schmitz.png">
+                                <img src="media/schmitz1.png">
                             </div>
                             <div class="main-content-item">
-                                <img src="media/schmitz.png">
+                                <img src="media/schmitz2.png">
                             </div>
                         </div>
-                    
-                        <h2>С окнами покупают</h2>
+
+                        <center><h2>С окнами покупают</h2></center>
 
                         <div class="main-content-block">
                             <div class="main-content-price-block">
@@ -244,6 +243,22 @@
                     </div>
                 </div>
 
+                <div class="main-content-text hidden">
+                    <div class="main-content-colors">
+                        <div>
+                            <h2>Армирование</h2>
+                        </div>
+                        <p>Армирующий профиль – стальной элемент, который устанавливается в камеру пластикового профиля. Он не дает профилю из ПВХ менять форму, помогает выдерживать нагрузки. Из-за сочетания материалов окна и называют металлопластиковыми.</p>
+                        <p>Пластиковый профиль держит на себе большой вес. Стеклопакет с толстыми стеклами и широкими камерами может весить до 80 кг. Не стоит забывать также про фурнитуру и вес самого профиля. Без армирования профиль не сможет выдерживать такую нагрузку.</p>
+                        <p>Погодные условия тоже могут деформировать пластиковый профиль. Если температура за окном резко и часто меняется (что не редкость в нашей стране), пластиковый профиль без армирования может покоситься.</p>
+                        <div>
+                            <h2>Фурнитура Siegenia</h2>
+                        </div>
+                        <p>Фурнитура Siegenia Favorit (русск.: «фаворит») предназначена для поворотных, откидных, поворотно-откидных окон и балконных дверей из ПВХ или деревянного профиля. </p>
+                        <p>Система Favorit Si-line входит в продукт-группу TITAN. По отзывам и опросам — одна из лучших в своем классе.</p>
+                    </div>
+                </div>
+
             </section>
 
             <section class="calc-section">
@@ -251,22 +266,22 @@
                     <div class="calc-options">
                         <div class="button-row">
                             <button onclick="window_change(this)" class="window-toggle-button button-active">
-                                <img src="#">
+                                <img src="">
                             </button>
                             <button onclick="window_change(this)" class="window-toggle-button">
-                                <img src="#">
+                                <img src="">
                             </button>
                             <button onclick="window_change(this)" class="window-toggle-button">
-                                <img src="#3">
+                                <img src="">
                             </button>
                         </div>
                         <div class="main-calc-choise-buttons calc-cameras">
-                            <label>Окна какие-то</label>
+                            <label>Профиль окон</label>
                             <button class="calc-button-active" onclick="change_active(this); selected_type1 = 0">Трёхкамерные</button>
                             <button onclick="change_active(this); selected_type1 = 1">Пятикамерные</button>
                         </div>
                         <div class="main-calc-choise-buttons calc-sp">
-                            <label>Окна другие-то</label>
+                            <label>Стеклопакет</label>
                             <button class="calc-button-active" onclick="change_active(this); selected_type2 = 0">СПО-24</button>
                             <button onclick="change_active(this); selected_type2 = 1">СПД-32</button>
                         </div>
