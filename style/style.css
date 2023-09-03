@@ -866,8 +866,6 @@ header {
         border-right-width: 0;
     }
 
-    .category {}
-
     .burger {
         display: flex;
         flex-direction: column;
