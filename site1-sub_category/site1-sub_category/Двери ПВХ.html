@@ -212,6 +212,41 @@
                 </div>
 
             </section>
+
+            <section class="calc-section">
+                <div class="main-content-calc">
+                    <div class="calc-options">
+                        <div class="button-row">
+                            <button onclick="window_change(this)" class="window-toggle-button button-active button1">
+                                <img src="../../img/svg-editor-image (6).svg">
+                            </button>
+                            <button onclick="window_change(this)" class="window-toggle-button button2">
+                                <img src="../../img/svg-editor-image (5).svg">
+                            </button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-cameras">
+                            <label>Профиль</label>
+                            <button class="calc-button-active" onclick="change_active(this); selected_type1 = 0">Novotex</button>
+                            <button onclick="change_active(this); selected_type1 = 1">Schmitz</button>
+                        </div>
+                    </div>
+                    <div class="calc-display">
+                        <div class="calc-input-params">
+                            <input type="text" class="calc-param param1" value="800">
+                            X
+                            <input type="text" class="calc-param param2" value="800">
+                        </div>
+                        <div class="main-calc-block">
+                            <img src="#" class="main-calc-image">
+                        </div>
+                    </div>
+                    <div class="main-calc-sum-block">
+                        <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
+                        <label class="main-calc-sum-label"></label>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
     <div class="container main-footer-background">
@@ -249,4 +284,5 @@
 </body>
 </html>
 
+<script src="Двери ПВХ.js"></script>
 <script src="script.js"></script>

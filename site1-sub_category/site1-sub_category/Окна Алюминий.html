@@ -206,33 +206,38 @@
                     </p>
                     <div>
                         <div class="main-content-block">
-                            <div>
+                            <div class="main-content-price-block">
                                 <img src="media/al-1.png">
+                                <label>ТП-60</label>
                             </div>
-                            <div>
+                            <div class="main-content-price-block">
                                 <img src="media/al-2.png">
                                 <label>ТП-60</label>
                             </div>
-                            <div>
+                            <div class="main-content-price-block">
                                 <img src="media/al-3.png">
+                                <label>ТП-60</label>
                             </div>
                         </div>
-                        <center><h2>С окнами покупают</h2></center>
-                        <br>
+                        <h2>С окнами покупают</h2>
                         <div class="main-content-block">
                             <div class="main-content-price-block">
+                                <label>Название</label>
                                 <img src="media/dop1.jpg">
                                 <label>600 руб.</label>
                             </div>
                             <div class="main-content-price-block">
+                                <label>Название</label>
                                 <img src="media/dop2.jpg">
                                 <label>600 руб.</label>
                             </div>
                             <div class="main-content-price-block">
+                                <label>Название</label>
                                 <img src="media/dop3.jpg">
                                 <label>600 руб.</label>
                             </div>
                             <div class="main-content-price-block">
+                                <label>Название</label>
                                 <img src="media/dop4.jpg">
                                 <label>600 руб.</label>
                             </div>
@@ -261,26 +266,28 @@
                 <div class="main-content-calc">
                     <div class="calc-options">
                         <div class="button-row">
-                            <button onclick="window_change(this)" class="window-toggle-button button-active">
-                                <img src="#">
+                            <button onclick="window_change(this)" class="window-toggle-button button-active button1">
+                                <img src="../../img/svg-editor-image (6).svg">
                             </button>
-                            <button onclick="window_change(this)" class="window-toggle-button">
-                                <img src="#">
+                            <button onclick="window_change(this)" class="window-toggle-button button2">
+                                <img src="../../img/svg-editor-image (5).svg">
                             </button>
-                            <button onclick="window_change(this)" class="window-toggle-button">
-                                <img src="#3">
+                            <button onclick="window_change(this)" class="window-toggle-button button3">
+                                <img src="../../img/svg-editor-image (7).svg">
                             </button>
                         </div>
                         <div class="main-calc-choise-buttons calc-cameras">
-                            <label>Профиль окон</label>
+                            <label>Профиль</label>
                             <button class="calc-button-active"
-                                onclick="change_active(this); selected_type1 = 0">Трёхкамерные</button>
-                            <button onclick="change_active(this); selected_type1 = 1">Пятикамерные</button>
+                                onclick="change_active(this); selected_type1 = 0">ТП</button>
+                            <button onclick="change_active(this); selected_type1 = 1">ТПТ</button>
+                            <button onclick="change_active(this); selected_type1 = 2">ЭК</button>
                         </div>
                         <div class="main-calc-choise-buttons calc-sp">
-                            <label>Стеклопакет</label>
+                            <label>Заполнение</label>
                             <button class="calc-button-active" onclick="change_active(this); selected_type2 = 0">СПО-24</button>
                             <button onclick="change_active(this); selected_type2 = 1">СПД-32</button>
+                            <button onclick="change_active(this); selected_type2 = 2">Стекло</button>
                         </div>
                     </div>
                     <div class="calc-display">
@@ -337,4 +344,5 @@
 </body>
 </html>
 
+<script src="Окна Алюминий.js"></script>
 <script src="script.js"></script>

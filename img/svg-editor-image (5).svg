@@ -1,0 +1,12 @@
+<svg width="400" height="320" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#33666C" id="svg_13" height="295" width="179.000005" y="13.25" x="15.25" fill-opacity="null" stroke-opacity="null" stroke-width="30.5" fill="#fff"/>
+  <line stroke="#33666C" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="162.453125" x2="193.249999" y1="7.453125" x1="10.25" fill-opacity="null" stroke-opacity="null" stroke-width="15.5" fill="none"/>
+  <line stroke="#33666C" stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="312.453125" x2="1.25" y1="165.453125" x1="184.250003" fill-opacity="null" stroke-opacity="null" stroke-width="15.5" fill="none"/>
+  <rect stroke="#33666C" id="svg_16" height="295" width="179.000005" y="15.25" x="207.25" fill-opacity="null" stroke-opacity="null" stroke-width="30.5" fill="#fff"/>
+  <line transform="rotate(100.60726165771484 293.75000000000006,93.95312499999996) " stroke="#33666C" stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="171.453125" x2="385.249999" y1="16.453125" x1="202.25" fill-opacity="null" stroke-opacity="null" stroke-width="15.5" fill="none"/>
+  <line transform="rotate(79.85591888427734 297.75,234.953125) " stroke="#33666C" stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="308.453125" x2="206.25" y1="161.453125" x1="389.250003" fill-opacity="null" stroke-opacity="null" stroke-width="15.5" fill="none"/>
+ </g>
+</svg>
