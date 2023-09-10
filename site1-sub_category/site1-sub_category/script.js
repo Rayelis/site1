@@ -144,20 +144,25 @@ function calc_sum(){
     let width = document.querySelector(".param2").value
     if(!width){return}
 
-    let final_price = (height * width) * window_price_array[selected_window] * type1_array[selected_type1] * type2_array[selected_type2]
+    let area = width * height / 1000000
+
+    let final_price = get_price() * area
+
+    final_price = Math.floor(final_price)
 
     place_to_write.innerHTML = final_price
 }
 
 function window_change(Element){
     let buttons = [...document.querySelectorAll(".window-toggle-button")]
-
+    
     buttons.forEach(button => {
         button.classList.remove("button-active")
     })
     Element.classList.add("button-active")
 
     selected_window = buttons.indexOf(Element)
+    document.querySelector(".main-calc-image").src = images[selected_window]
 }
 
 function change_active(Element){
@@ -178,14 +183,6 @@ window.onload = () => {
                                     width="100%" height="600px" frameborder="1" allowfullscreen="true"
                                     style="position:relative;"></iframe>
                         </div>`
-
-    let header_top_block = document.querySelector(".header-top")
-
-    buffer = header_top_block.innerHTML
-
-    header_top_block.innerHTML = `<button class="button" onclick="window.location='../../index.html'">На главную</button>`
-
-    header_top_block.innerHTML += buffer
 
     let contacts = document.querySelector(".main-footer-contact")
 

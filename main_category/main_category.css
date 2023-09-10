@@ -33,8 +33,6 @@ header {
 }
 
 .header-top {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
     background-color: var(--background_color);
     padding: var(--block_size);
     background-image: url("media/bg.png");

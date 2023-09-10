@@ -144,14 +144,6 @@ window.onload = () => {
                                     style="position:relative;"></iframe>
                         </div>`
 
-    let header_top_block = document.querySelector(".header-top")
-
-    buffer = header_top_block.innerHTML
-
-    header_top_block.innerHTML = `<button class="button" onclick="window.location='../../main_page/src/index.html'">На главную</button>`
-
-    header_top_block.innerHTML += buffer
-
     let contacts = document.querySelector(".main-footer-contact")
 
     contacts.innerHTML = `<div class="main-footer-contact-phone">

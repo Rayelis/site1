@@ -30,8 +30,6 @@ a{
 }
 
 .header-top{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
     background-color: var(--background_color);
     padding: var(--block_size);
     background-image: url("media/bg.png");
@@ -524,6 +522,18 @@ main{
     aspect-ratio: 2 / 1;
 }
 
+.button-row .door{
+    height: calc(var(--block_size) * 2.5);
+}
+
+.button-row .door1{
+    aspect-ratio: 1 / 1.75;
+}
+
+.button-row .door2{
+    aspect-ratio: 1 / 1.25;
+}
+
 .button-row button img{
     height: 100%;
     width: 100%;
@@ -532,7 +542,7 @@ main{
 .button-row button:hover,
 .button-row .button-active{
     border-style: solid;
-    border-width: calc(var(--block_size) * 0.2);
+    border-width: calc(var(--block_size) * 0.15);
     border-color: var(--darker_background_color);
 }
 
