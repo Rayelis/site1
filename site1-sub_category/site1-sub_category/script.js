@@ -113,4 +113,89 @@ function calculateCost() {
 
       // Отображение стоимости на странице
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
-    }
+}
+
+    function submit_form(){
+        const name = document.querySelector(".feedback-form input[name=Name]").value
+        const phone = document.querySelector(".feedback-form input[name=Phone]").value
+
+        const host = window.location.hostname === '' ? 'localhost' : window.location.hostname
+
+        fetch(`http:${host}/api/v1/email/send`, {
+            method: "post",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: name,
+                phone: phone
+            })
+        })
+
+        hide_forms()
+}
+
+function calc_sum(){
+    let place_to_write = document.querySelector(".main-calc-sum-label")
+
+    let height = document.querySelector(".param1").value
+    if(!height){return}
+
+    let width = document.querySelector(".param2").value
+    if(!width){return}
+
+    let area = width * height / 1000000
+
+    let final_price = get_price() * area
+
+    final_price = Math.floor(final_price)
+
+    place_to_write.innerHTML = final_price
+}
+
+function window_change(Element){
+    let buttons = [...document.querySelectorAll(".window-toggle-button")]
+    
+    buttons.forEach(button => {
+        button.classList.remove("button-active")
+    })
+    Element.classList.add("button-active")
+
+    selected_window = buttons.indexOf(Element)
+    document.querySelector(".main-calc-image").src = images[selected_window]
+}
+
+function change_active(Element){
+    let buttons = [...Element.parentNode.querySelectorAll('button')]
+
+    buttons.forEach( button => {
+        button.classList.remove("calc-button-active")
+    })
+
+    Element.classList.add("calc-button-active")
+}
+
+window.onload = () => {
+    let map_block = document.querySelector(".main-footer-services")
+
+    map_block.innerHTML = `<div style="position:relative;overflow:hidden;width:inherit">
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=53.187786%2C56.842407&mode=whatshere&whatshere%5Bpoint%5D=53.184968%2C56.841827&whatshere%5Bzoom%5D=17&z=17.15"
+                                    width="100%" height="600px" frameborder="1" allowfullscreen="true"
+                                    style="position:relative;"></iframe>
+                        </div>`
+
+    let contacts = document.querySelector(".main-footer-contact")
+
+    contacts.innerHTML = `<div class="main-footer-contact-phone">
+                            <p>Телефон:</p>
+                            <p>+7 (909) 053-26-26</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>Почта:</p>
+                            <p>montazh18@bk.ru</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>Адрес:</p>
+                            <p>г. Ижевск, проезд имени Дерябина, 2/50</p>
+                        </div>`
+}

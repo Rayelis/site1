@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Окна ПВХ</title>
+</head>
+<body>
+
+    <div class="black-screen hidden pop_up_form" onclick="hide_forms()"></div>
+    <div class="feedback-form hidden pop_up_form">
+        <h3>Оставить Заявку</h3>
+        <button class="close-button" onclick="hide_forms()">×</button>
+        <div class="feedback-input">
+            <input type="text" placeholder="Имя" name="Name">
+            <input type="text" placeholder="Телефон" name="Phone">
+            <input type="submit" value="Отправить" name="Feedback_submit" class="button" onclick="submit_form()"
+                onsubmit="event.preventDefault()">
+        </div>
+    
+        <p><input type="checkbox" name="Policy">Нажимая на кнопку, вы даете согласие на обработку своих
+            персональных данных и соглашаетесь с политикой конфиденциальности
+        </p>
+    </div>
+
+    <header>
+        <section class="header-top mobile-hide">
+            <div class="contacts">
+                <label>Адрес: <br>проезд имени Дерябина, 2/50</label>
+                <label>Режим работы: <br>08:00 - 17:00</label>
+                <label>Номер Телефона: <br>+7 (909) 053-26-26</label>
+                <div>
+                    <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="header-bottom mobile-hide">
+            <div class="nav nav-active">
+                <a href="../../main_category/Окна.html">Окна<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Окна%20ПВХ.html">ПВХ</a>
+                    <a href="Окна%20Алюминий.html">Алюминий</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Двери.html">Двери<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Двери%20ПВХ.html">ПВХ</a>
+                    <a href="Двери%20Алюминий.html">Алюминий</a>
+                    <a href="Двери%20Лофт.html">Лофт</a>
+                    <a href="Двери%20Скрытые.html">Скрытые</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Витраж.html">Витраж <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Витраж%20ПВХ.html">ПВХ</a>
+                    <a href="Витраж%20Алюминий.html">Алюминий</a>
+                    <a href="Витраж%20Зимний%20Сад.html">Зимний сад</a>
+                    <a href="Витраж%20Безрамочное%20Остекление.html">Безрамочное остекление</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Каркасные%20дома.html">Каркасные дома <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Каркасы%20Навесы.html">Навесы</a>
+                    <a href="Каркасы%20Крыши.html">Крыши</a>
+                    <a href="Каркасы%20Дома.html">Каркасы</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Ворота.html">Ворота<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Роллеты.html">Роллеты<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Ремонт.html">Ремонт<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+        </section>
+        <section class="mobile-show">
+            <input type="checkbox" class="nav-checkbox" onclick="show_sidebar()">
+
+            <div class="burger">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <button class="mobile-feedback-button" onclick="show_feedback_form()">Оставить заявку</button>
+        </section>
+    </header>
+
+
+    <div class="content">
+        <aside class="mobile-sidebar">
+            <div class="sidebar">
+                <ul class="categories">
+                    <li class="category">
+                        <a href="../../index.html"><b>На Главную</b></a>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Окна.html">Окна</a>
+                        <ul class="subcategories">
+                            <li><a href="Окна%20ПВХ.html">Окна ПВХ</a></li>
+                            <li><a href="Окна%20Алюминий.html">Окна Алюминий</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Двери.html">Двери</a>
+                        <ul class="subcategories">
+                            <li><a href="Двери%20ПВХ.html">Двери ПВХ</a></li>
+                            <li><a href="Двери%20Алюминий.html">Двери Алюминий</a></li>
+                            <li><a href="Двери%20Лофт.html">Двери Лофт</a></li>
+                            <li><a href="Двери%20Скрытые.html">Двери Скрытые</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Витраж.html">Витраж</a>
+                        <ul class="subcategories">
+                            <li><a href="Витраж%20Алюминий.html">Витраж Алюминий</a></li>
+                            <li><a href="Витраж%20ПВХ.html">Витраж ПВХ</a></li>
+                            <li><a href="Витраж%20Зимний%20Сад.html">Витраж Зимний Сад</a></li>
+                            <li><a href="Витраж%20Безрамочное%20Остекление.html">Витраж Безрамочное остекление</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Каркасные%20дома.html">Каркасные дома</a>
+                        <ul class="subcategories">
+                            <li><a href="Каркасы%20Навесы.html">Навесы</a></li>
+                            <li><a href="Каркасы%20Крыши.html">Крыши</a></li>
+                            <li><a href="Каркасы%20Дома.html">Каркасы</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Ворота.html">Ворота</a>
+                        <ul class="subcategories">
+                            <li><a href="Ворота.html">Ворота</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Роллеты.html">Роллеты</a>
+                        <ul class="subcategories">
+                            <li><a href="Роллеты.html">Роллеты</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Ремонт.html">Ремонт</a>
+                        <ul class="subcategories">
+                            <li><a href="Ремонт%20Внутренний.html">Внутренняя отделка</a></li>
+                            <li><a href="Ремонт%20Внешний.html">Внешняя отделка</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section class="main-nav">
+                <button class="main-nav-button nav-active" onclick="change_text(this)">Описание</button>
+                <button class="main-nav-button nav-passive" onclick="change_text(this)">Ламинация</button>
+                <button class="main-nav-button nav-passive" onclick="change_text(this)">Фурнитура</button>
+            </section>
+            
+            <section class="main-content">
+
+                <div class="main-content-text">
+                    <p>
+                        <center><h2>Оконные системы</h2></center>
+                    </p>
+                    <p>
+                        В своей работе мы используем только качественные профильные системы проверенных и хорошо зарекомендовавших себя производителей!
+                        По приемлемым ценам предоставляем заказчикам выбор лучших светопрозрачных конструкций
+                    </p>
+                    <p>Трехкамерное исполнение профильной системы Schmitz делает окна более доступными по цене, а благодаря улучшенным показателям изоляции и двухкамерному стеклопакету обеспечивает сохранность тепла в зимний период года на высоком уровне.</p>
+                    <p>5-ти камерная система монтажной шириной 70мм, объединяющая в себе инновационные немецкие технологии в области экструзии и улучшенные показатели адаптации к российскому климату. Белая поверхность профиля придает изысканности и элегантности домашнему интерьеру и способствует легкому удалению пыли и иных загрязнений.</p>
+
+                    <div class="content-additional">
+                        <div class="main-content-block">
+                            <div class="main-content-price-block">
+                                <img src="media/schmitz1.png">
+                                <label>Schmitz 3к</label>
+                            </div>
+                            <div class="main-content-price-block">
+                                <img src="media/schmitz2.png">
+                                <label>Schmitz 5к</label>
+                            </div>
+                        </div>
+
+                        <center><h2>С окнами покупают</h2></center>
+
+                        <div class="main-content-block">
+                            <div class="main-content-price-block">
+                                <label>Подоконник</label>
+                                <img src="media/dop1.png">
+                                <label>1200/м²</label>
+                            </div>
+                            <div class="main-content-price-block">
+                                <label>Откосы</label>
+                                <img src="media/dop2.png">
+                                <label>900/м²</label>
+                            </div>
+                            <div class="main-content-price-block">
+                                <label>Отливы</label>
+                                <img src="media/dop3.png">
+                                <label>1100/м²</label>
+                            </div>
+                            <div class="main-content-price-block">
+                                <label>Сетки</label>
+                                <img src="media/dop4.png">
+                                <label>800р/м²</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content-text hidden">
+                    <div class="main-content-colors">
+                        <div>
+                            <h2>Варианты Ламинации</h2>
+                        </div>
+                        <div class="imgss">
+                            <img src="media/DJ603-42.jpg">
+                            <img src="media/GO502-Z8.jpg">
+                            <img src="media/KACH7-Z8.jpg">
+                            <img src="media/UJ401-Z8.jpg">
+                        </div>
+                        <p>Цвет уточняется при заказе.</p>
+                    </div>
+                </div>
+
+                <div class="main-content-text hidden">
+                    <div class="main-content-colors">
+                        <div>
+                            <h2>Армирование</h2>
+                        </div>
+                        <p>Армирующий профиль – стальной элемент, который устанавливается в камеру пластикового профиля. Он не дает профилю из ПВХ менять форму, помогает выдерживать нагрузки. Из-за сочетания материалов окна и называют металлопластиковыми.</p>
+                        <p>Пластиковый профиль держит на себе большой вес. Стеклопакет с толстыми стеклами и широкими камерами может весить до 80 кг. Не стоит забывать также про фурнитуру и вес самого профиля. Без армирования профиль не сможет выдерживать такую нагрузку.</p>
+                        <p>Погодные условия тоже могут деформировать пластиковый профиль. Если температура за окном резко и часто меняется (что не редкость в нашей стране), пластиковый профиль без армирования может покоситься.</p>
+                        <div>
+                            <h2>Фурнитура Siegenia</h2>
+                        </div>
+                        <p>Фурнитура Siegenia Favorit (русск.: «фаворит») предназначена для поворотных, откидных, поворотно-откидных окон и балконных дверей из ПВХ или деревянного профиля. </p>
+                        <p>Система Favorit Si-line входит в продукт-группу TITAN. По отзывам и опросам — одна из лучших в своем классе.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="calc-section">
+                <div class="main-content-calc">
+                    <div class="calc-options">
+                        <div class="button-row">
+                            <button onclick="window_change(this)" class="window-toggle-button button-active button1">
+                                <img src="../../img/svg-editor-image (6).svg">
+                            </button>
+                            <button onclick="window_change(this)" class="window-toggle-button button2">
+                                <img src="../../img/svg-editor-image (5).svg">
+                            </button>
+                            <button onclick="window_change(this)" class="window-toggle-button button3">
+                                <img src="../../img/svg-editor-image (7).svg">
+                            </button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-cameras">
+                            <label>Профиль</label>
+                            <button class="calc-button-active"
+                                onclick="change_active(this); selected_type1 = 0">Трёхкамерные</button>
+                            <button onclick="change_active(this); selected_type1 = 1">Пятикамерные</button>
+                        </div>
+                        <div class="main-calc-choise-buttons calc-sp">
+                            <label>Заполнение</label>
+                            <button class="calc-button-active" onclick="change_active(this); selected_type2 = 0">СПО-24</button>
+                            <button onclick="change_active(this); selected_type2 = 1">СПД-32</button>
+                        </div>
+                    </div>
+                    <div class="calc-display">
+                        <div class="calc-input-params">
+                            <input type="text" class="calc-param param1" value="800">
+                            X
+                            <input type="text" class="calc-param param2" value="800">
+                        </div>
+                        <div class="main-calc-block">
+                            <img src="#" class="main-calc-image">
+                        </div>
+                    </div>
+                    <div class="main-calc-sum-block">
+                        <button class="main-calc-sum-button" onclick="calc_sum()">Рассчитать стоимость</button>
+                        <label class="main-calc-sum-label"></label>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    <div class="container main-footer-background">
+        <div class="main">
+            <footer class="main-footer">
+                <div class="main-footer-wrap">
+                    <div class="main-footer-services">
+                        <div class="main-footer-services-t">
+                            <p>Услуги</p>
+                        </div>
+                        <div class="main-footer-services-p">
+                            <a href="" class="main-footer-services-p-text">Остекление балконов и лоджий</a>
+                            <a href="" class="main-footer-services-p-text">Изготовление нестандартных окон</a>
+                            <a href="" class="main-footer-services-p-text">Установка пластиковых окон</a>
+                            <a href="" class="main-footer-services-p-text">Ремонт и сервисное обслуживание</a>
+                            <a href="" class="main-footer-services-p-text">Доставка</a>
+                            <a href="" class="main-footer-services-p-text">Арочная гибка профиля</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-contact">
+                        <div class="main-footer-contact-phone">
+                            <p>7 (3412) 32 60 65</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>okna@avgust.biz</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="Окна ПВХ.js"></script>
+<script src="script.js"></script>

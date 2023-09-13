@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Каркасные дома</title>
+</head>
+<body>
+
+    <div class="black-screen hidden pop_up_form" onclick="hide_forms()"></div>
+    <div class="feedback-form hidden pop_up_form">
+        <h3>Оставить Заявку</h3>
+        <button class="close-button" onclick="hide_forms()">×</button>
+        <div class="feedback-input">
+            <input type="text" placeholder="Имя" name="Name">
+            <input type="text" placeholder="Телефон" name="Phone">
+            <input type="submit" value="Отправить" name="Feedback_submit" class="button" onclick="submit_form()"
+                onsubmit="event.preventDefault()">
+        </div>
+    
+        <p><input type="checkbox" name="Policy">Нажимая на кнопку, вы даете согласие на обработку своих
+            персональных данных и соглашаетесь с политикой конфиденциальности
+        </p>
+    </div>
+
+    <header>
+        <section class="header-top mobile-hide">
+            <div class="contacts">
+                <label>Адрес: <br>проезд имени Дерябина, 2/50</label>
+                <label>Режим работы: <br>08:00 - 17:00</label>
+                <label>Номер Телефона: <br>+7 (909) 053-26-26</label>
+                <div>
+                    <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="header-bottom mobile-hide">
+            <div class="nav">
+                <a href="../../main_category/Окна.html">Окна<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Окна%20ПВХ.html">ПВХ</a>
+                    <a href="Окна%20Алюминий.html">Алюминий</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Двери.html">Двери<img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Двери%20ПВХ.html">ПВХ</a>
+                    <a href="Двери%20Алюминий.html">Алюминий</a>
+                    <a href="Двери%20Лофт.html">Лофт</a>
+                    <a href="Двери%20Скрытые.html">Скрытые</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Витраж.html">Витраж <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Витраж%20ПВХ.html">ПВХ</a>
+                    <a href="Витраж%20Алюминий.html">Алюминий</a>
+                    <a href="Витраж%20Зимний%20Сад.html">Зимний сад</a>
+                    <a href="Витраж%20Безрамочное%20Остекление.html">Безрамочное остекление</a>
+                </div>
+            </div>
+            <div class="nav nav-active">
+                <a href="../../main_category/Каркасные%20дома.html">Каркасные дома <img src="media/svg-editor-image (4).svg"></a>
+                <div class="nav-dropdown">
+                    <a href="Каркасы%20Навесы.html">Навесы</a>
+                    <a href="Каркасы%20Крыши.html">Крыши</a>
+                    <a href="Каркасы%20Дома.html">Каркасы</a>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Ворота.html">Ворота<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Роллеты.html">Роллеты<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+            <div class="nav">
+                <a href="../../main_category/Ремонт.html">Ремонт<img src="media/svg-editor-image (4).svg"></a>
+            </div>
+        </section>
+        <section class="mobile-show">
+            <input type="checkbox" class="nav-checkbox" onclick="show_sidebar()">
+
+            <div class="burger">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <button class="mobile-feedback-button" onclick="show_feedback_form()">Оставить заявку</button>
+        </section>
+    </header>
+
+
+    <div class="content">
+        <aside class="mobile-sidebar">
+            <div class="sidebar">
+                <ul class="categories">
+                    <li class="category">
+                        <a href="../../index.html"><b>На Главную</b></a>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Окна.html">Окна</a>
+                        <ul class="subcategories">
+                            <li><a href="Окна%20ПВХ.html">Окна ПВХ</a></li>
+                            <li><a href="Окна%20Алюминий.html">Окна Алюминий</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Двери.html">Двери</a>
+                        <ul class="subcategories">
+                            <li><a href="Двери%20ПВХ.html">Двери ПВХ</a></li>
+                            <li><a href="Двери%20Алюминий.html">Двери Алюминий</a></li>
+                            <li><a href="Двери%20Лофт.html">Двери Лофт</a></li>
+                            <li><a href="Двери%20Скрытые.html">Двери Скрытые</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Витраж.html">Витраж</a>
+                        <ul class="subcategories">
+                            <li><a href="Витраж%20Алюминий.html">Витраж Алюминий</a></li>
+                            <li><a href="Витраж%20ПВХ.html">Витраж ПВХ</a></li>
+                            <li><a href="Витраж%20Зимний%20Сад.html">Витраж Зимний Сад</a></li>
+                            <li><a href="Витраж%20Безрамочное%20Остекление.html">Витраж Безрамочное остекление</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Каркасные%20дома.html">Каркасные дома</a>
+                        <ul class="subcategories">
+                            <li><a href="Каркасы%20Навесы.html">Навесы</a></li>
+                            <li><a href="Каркасы%20Крыши.html">Крыши</a></li>
+                            <li><a href="Каркасы%20Дома.html">Каркасы</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Ворота.html">Ворота</a>
+                        <ul class="subcategories">
+                            <li><a href="Ворота.html">Ворота</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Роллеты.html">Роллеты</a>
+                        <ul class="subcategories">
+                            <li><a href="Роллеты.html">Роллеты</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="../../main_category/Ремонт.html">Ремонт</a>
+                        <ul class="subcategories">
+                            <li><a href="Ремонт%20Внутренний.html">Внутренняя отделка</a></li>
+                            <li><a href="Ремонт%20Внешний.html">Внешняя отделка</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section class="main-nav">
+                <button class="main-nav-button nav-active" onclick="change_text(this)">Описание</button>
+            </section>
+            
+            <section class="main-content">
+
+                <div class="main-content-text">
+                    <p>
+                        Каркасные дома - это современное решение для жилья, основанное на использовании прочной каркасной конструкции. Они
+                        обладают высокой прочностью, быстрым сроком строительства и гибкостью в планировке.
+                    </p>
+                    <p>
+                        Каркасные дома предоставляют возможность создать энергоэффективное жилье с хорошей теплоизоляцией. Они позволяют
+                        экономить на затратах на отопление и кондиционирование.
+                    </p>
+                    <p>
+                        Важным преимуществом каркасных домов является возможность адаптации под различные архитектурные стили и планировочные
+                        решения. Они могут быть созданы в соответствии с вашиими потребностями и предпочтениями.
+                    </p>
+                    <p>
+                        Каркасные дома также обладают прочностью и долговечностью, способными прослужить многие годы.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <div class="container main-footer-background">
+        <div class="main">
+            <footer class="main-footer">
+                <div class="main-footer-wrap">
+                    <div class="main-footer-services">
+                        <div class="main-footer-services-t">
+                            <p>Услуги</p>
+                        </div>
+                        <div class="main-footer-services-p">
+                            <a href="" class="main-footer-services-p-text">Остекление балконов и лоджий</a>
+                            <a href="" class="main-footer-services-p-text">Изготовление нестандартных окон</a>
+                            <a href="" class="main-footer-services-p-text">Установка пластиковых окон</a>
+                            <a href="" class="main-footer-services-p-text">Ремонт и сервисное обслуживание</a>
+                            <a href="" class="main-footer-services-p-text">Доставка</a>
+                            <a href="" class="main-footer-services-p-text">Арочная гибка профиля</a>
+                        </div>
+                    </div>
+                    <div class="main-footer-contact">
+                        <div class="main-footer-contact-phone">
+                            <p>7 (3412) 32 60 65</p>
+                        </div>
+                        <div class="main-footer-contact-email">
+                            <p>okna@avgust.biz</p>
+                        </div>
+                        <div class="main-footer-contact-address">
+                            <p>г. Ижевск, ул. Воткинское шоссе 206 </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="script.js"></script>
