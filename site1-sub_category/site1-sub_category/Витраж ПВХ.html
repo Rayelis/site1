@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Витраж ПВХ</title>
 </head>
 <body>
 
@@ -24,26 +24,6 @@
         </p>
     </div>
 
-    <div class="calculator hidden pop_up_form">
-        <button class="close-button" onclick="hide_forms()">×</button>
-        <h3>Калькулятор стоимости строительного сайта</h1>
-        <form>
-            <label for="area">Площадь (в квадратных метрах):</label>
-            <input type="number" id="area" name="area" class="feedback-input">
-    
-            <label for="material">Материал:</label>
-            <select id="material" name="material" class="feedback-input">
-                <option value="wood">Дерево</option>
-                <option value="concrete">Бетон</option>
-                <option value="brick">Кирпич</option>
-            </select>
-    
-            <button type="button" class="button" onclick="calculateCost()">Рассчитать стоимость</button>
-        </form>
-    
-        <p id="totalCost"></p>
-    </div>
-
     <header>
         <section class="header-top mobile-hide">
             <div class="contacts">
@@ -51,7 +31,6 @@
                 <label>Режим работы: <br>08:00 - 17:00</label>
                 <label>Номер Телефона: <br>+7 (909) 053-26-26</label>
                 <div>
-                    <button class="button" onclick="show_calculator_form()">Расчитать стоимость</button>
                     <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
                 </div>
             </div>
@@ -178,7 +157,6 @@
         <main>
             <section class="main-nav">
                 <button class="main-nav-button nav-active" onclick="change_text(this)">Описание</button>
-                <button class="main-nav-button nav-passive" onclick="change_text(this)">Цены</button>
             </section>
             
             <section class="main-content">
@@ -201,10 +179,6 @@
                         Обратитесь к нам, чтобы узнать больше о витражах ПВХ и получить профессиональную помощь в выборе и установке витражей,
                         которые подчеркнут красоту вашего интерьера
                     </p>
-                </div>
-
-                <div class="main-content-text hidden">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, beatae? Asperiores porro fuga deserunt aliquam deleniti, quod enim adipisci ad reiciendis eaque veritatis quae, et aut aspernatur sint minus beatae?
                 </div>
 
             </section>

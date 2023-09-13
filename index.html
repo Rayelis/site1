@@ -78,26 +78,6 @@
         </div>
     </aside>
 
-    <div class="calculator hidden pop_up_form">
-        <button class="close-button" onclick="hide_forms()">×</button>
-        <h3>Калькулятор стоимости строительного сайта</h1>
-            <form>
-                <label for="area">Площадь (в квадратных метрах):</label>
-                <input type="number" id="area" name="area" class="feedback-input">
-    
-                <label for="material">Материал:</label>
-                <select id="material" name="material" class="feedback-input">
-                    <option value="wood">Дерево</option>
-                    <option value="concrete">Бетон</option>
-                    <option value="brick">Кирпич</option>
-                </select>
-    
-                <button type="button" class="button" onclick="calculateCost()">Рассчитать стоимость</button>
-            </form>
-    
-            <p id="totalCost"></p>
-    </div>
-
     <div class="black-screen hidden" onclick="hide_forms()"></div>
     <div class="feedback-form hidden pop_up_form">
         <h3>Оставить Заявку</h3>
@@ -120,7 +100,6 @@
                 <label>Режим работы: <br> 08:00 - 17:00</label>
                 <label>Номер Телефона: <br> +7 (909) 053-26-26</label>
                 <div>
-                    <button class="button" onclick="show_calculator_form()">Расчитать стоимость</button>
                     <button class="button" onclick="show_feedback_form()">Оставить заявку</button>
                 </div>
             </div>
@@ -232,25 +211,25 @@
                         <p>Каталог услуг</p>
                     </div>
                     <div class="catalog-service-main">
-                        <div class="catalog-service-cart catalog-service-cart-background-1" onclick="window.location='../../main_category/Каркасные дома.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-1" onclick="window.location='main_category/Каркасные дома.html'">
                             <p class="catalog-service-cart-text">Каркасные дома</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-2" onclick="window.location='../../main_category/Ремонт.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-2" onclick="window.location='main_category/Ремонт.html'">
                             <p class="catalog-service-cart-text">Ремонт</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-3" onclick="window.location='../../main_category/Окна.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-3" onclick="window.location='main_category/Окна.html'">
                             <p class="catalog-service-cart-text">Окна</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-4" onclick="window.location='../../main_category/Двери.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-4" onclick="window.location='main_category/Двери.html'">
                             <p class="catalog-service-cart-text">Двери</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-5" onclick="window.location='../../main_category/Витраж.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-5" onclick="window.location='main_category/Витраж.html'">
                             <p class="catalog-service-cart-text">Витраж</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-6" onclick="window.location='../../main_category/Ворота.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-6" onclick="window.location='main_category/Ворота.html'">
                             <p class="catalog-service-cart-text">Ворота</p>
                         </div>
-                        <div class="catalog-service-cart catalog-service-cart-background-7" onclick="window.location='../../main_category/Роллеты.html'">
+                        <div class="catalog-service-cart catalog-service-cart-background-7" onclick="window.location='main_category/Роллеты.html'">
                             <p class="catalog-service-cart-text">Роллеты</p>
                         </div>
                     </div>

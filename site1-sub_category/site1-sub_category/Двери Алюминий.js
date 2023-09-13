@@ -10,15 +10,15 @@ let images = [
 
 function get_price() {
     if (selected_type1 == 0) {
-        return 9500
+        return 7500
     }
     if (selected_type1 == 1) {
-        return 17000
+        return 9500
     }
     if (selected_type1 == 2) {
-        return 25000
+        return 17000
     }
     if (selected_type1 == 3) {
-        return 7500
+        return 25000
     }
 }
