@@ -135,24 +135,6 @@ function calculateCost() {
         hide_forms()
 }
 
-function calc_sum(){
-    let place_to_write = document.querySelector(".main-calc-sum-label")
-
-    let height = document.querySelector(".param1").value
-    if(!height){return}
-
-    let width = document.querySelector(".param2").value
-    if(!width){return}
-
-    let area = width * height / 1000000
-
-    let final_price = get_price() * area
-
-    final_price = Math.floor(final_price)
-
-    place_to_write.innerHTML = final_price
-}
-
 function window_change(Element){
     let buttons = [...document.querySelectorAll(".window-toggle-button")]
     

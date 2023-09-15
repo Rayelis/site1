@@ -22,3 +22,30 @@ function get_price() {
         return 25000
     }
 }
+
+function calc_sum() {
+    let place_to_write = document.querySelector(".main-calc-sum-label")
+
+    let height = document.querySelector(".param1").value
+    if (!height) { return }
+
+    let width = document.querySelector(".param2").value
+    if (!width) { return }
+
+    let area = width * height / 1000000
+
+    let final_price = get_price() * area
+
+    if(selected_window == 1){
+        if(selected_type1 < 2){
+            final_price += 2500
+        }
+        if(selected_type1 >= 2){
+            final_price += 3500
+        }
+    }
+
+    final_price = Math.floor(final_price)
+
+    place_to_write.innerHTML = final_price
+}
