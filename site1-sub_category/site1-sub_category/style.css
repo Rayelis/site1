@@ -429,6 +429,8 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: calc(var(--block_size) * 2);
     margin-bottom: calc(var(--block_size) * 2);
 }
 
@@ -491,6 +493,7 @@ main{
     display: flex;
     flex-direction: row;
     align-items: start;
+    flex-wrap: wrap;
     gap: calc(var(--block_size) * 1);
 }
 
@@ -828,6 +831,15 @@ main{
         flex-direction: column;
         justify-content: space-around;
     }
+
+    .calc-options{
+        flex-direction: row;
+    }
+
+    .calc-display{
+        padding: calc(var(--block_size) * 0.5);
+    }
+
 
 }
 

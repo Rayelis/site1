@@ -579,7 +579,6 @@ input:hover {
     }
 
     .main_category_section{
-        width: inherit;
         margin: var(--block_size) 0 0 0;
     }
 
