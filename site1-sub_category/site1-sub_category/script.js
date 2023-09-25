@@ -115,25 +115,22 @@ function calculateCost() {
       document.getElementById("totalCost").innerHTML = "Общая стоимость: " + totalCost + " рублей";
 }
 
-    function submit_form(){
+    async function  submit_form(){
         const name = document.querySelector(".feedback-form input[name=Name]").value
         const phone = document.querySelector(".feedback-form input[name=Phone]").value
 
         const host = window.location.hostname === '' ? 'localhost' : window.location.hostname
 
-        fetch(`http:${host}/api/v1/email/send`, {
-            method: "post",
+        fetch(`http://localhost:5000/send?phone=${phone}&name=${name}`, {
+            method: "get",
+            mode: "no-cors",
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify({
-                firstName: name,
-                phone: phone
-            })
         })
 
         hide_forms()
-}
+    }
 
 function window_change(Element){
     let buttons = [...document.querySelectorAll(".window-toggle-button")]

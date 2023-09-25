@@ -34,3 +34,4 @@ function calc_sum() {
 
     place_to_write.innerHTML = final_price
 }
+
